@@ -14,7 +14,7 @@ import { defineUserConfig } from "vuepress";
 import { plumeTheme } from "vuepress-theme-plume";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/french/",
   lang: "zh-CN",
   title: "青春记录站-新大学法语",
   description: "新大学法语精读笔记",
