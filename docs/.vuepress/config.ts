@@ -9,19 +9,26 @@
  * 特别的，请不要在两个配置文件中重复配置相同的项，当前文件的配置项会被覆盖
  */
 
-import { viteBundler } from '@vuepress/bundler-vite'
-import { defineUserConfig } from 'vuepress'
-import { plumeTheme } from 'vuepress-theme-plume'
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
+import { plumeTheme } from "vuepress-theme-plume";
 
 export default defineUserConfig({
-  base: '/',
-  lang: 'zh-CN',
-  title: '青春记录站-新大学法语',
-  description: '新大学法语精读笔记',
+  base: "/",
+  lang: "zh-CN",
+  title: "青春记录站-新大学法语",
+  description: "新大学法语精读笔记",
 
   head: [
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "https://theme-plume.vuejs.press/favicon-32x32.png",
+      },
+    ],
   ],
 
   bundler: viteBundler(),
@@ -57,26 +64,26 @@ export default defineUserConfig({
     // },
 
     /* 博客文章页面链接前缀 */
-    article: '/article/',
+    article: "/article/",
 
     /**
      * 编译缓存，加快编译速度
      * @see https://theme-plume.vuejs.press/config/basic/#cache
      */
-    cache: 'filesystem',
+    cache: "filesystem",
 
     /**
      * 为 markdown 文件自动添加 frontmatter 配置
      * @see https://theme-plume.vuejs.press/config/basic/#autofrontmatter
      */
-    // autoFrontmatter: {
-    //   permalink: true,  // 是否生成永久链接
-    //   createTime: true, // 是否生成创建时间
-    //   title: true,      // 是否生成标题
-    // },
+    autoFrontmatter: {
+      permalink: true, // 是否生成永久链接
+      createTime: false, // 是否生成创建时间
+      title: true, // 是否生成标题
+    },
 
     /* 本地搜索, 默认启用 */
-    search: { provider: 'local' },
+    search: { provider: "local" },
 
     /**
      * Algolia DocSearch
@@ -101,12 +108,12 @@ export default defineUserConfig({
     // },
 
     /* 文章字数统计、阅读时间，设置为 false 则禁用 */
-    // readingTime: true,
+    readingTime: false,
 
     /**
-      * markdown
-      * @see https://theme-plume.vuejs.press/config/markdown/
-      */
+     * markdown
+     * @see https://theme-plume.vuejs.press/config/markdown/
+     */
     // markdown: {
     //   abbr: true,         // 启用 abbr 语法  *[label]: content
     //   annotation: true,   // 启用 annotation 语法  [+label]: content
@@ -181,4 +188,4 @@ export default defineUserConfig({
      */
     // encrypt: {},
   }),
-})
+});
