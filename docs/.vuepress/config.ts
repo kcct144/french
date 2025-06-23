@@ -26,7 +26,7 @@ export default defineUserConfig({
       {
         rel: "icon",
         type: "image/png",
-        href: "https://theme-plume.vuejs.press/favicon-32x32.png",
+        href: "https://s21.ax1x.com/2025/06/23/pVZhphF.png",
       },
     ],
   ],
